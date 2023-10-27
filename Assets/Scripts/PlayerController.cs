@@ -43,6 +43,12 @@ public class PlayerController : MonoBehaviour
             rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
             isJumping = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpForce);     
+            isJumping = true;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
