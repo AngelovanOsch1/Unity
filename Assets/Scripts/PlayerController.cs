@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody2D rb2D;
+    public GameObject lastCheckpoint;
+    public Lives livesScript;
 
     private float moveSpeed;
     private float jumpForce;
@@ -66,4 +68,27 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
         }
     }
+    public void Respawn()
+    {
+        if (livesScript.GetLives() > 0)
+        {
+            if (lastCheckpoint != null)
+            {
+                transform.position = lastCheckpoint.transform.position;
+            }
+            else
+            {
+                // Handle case where there's no last checkpoint set
+                // For example, respawn at a default position.
+                // transform.position = defaultRespawnPosition;
+            }
+
+            livesScript.UpdateLives(livesScript.GetLives() - 1);
+        }
+        else
+        {
+            // Game Over Logic
+        }
+    }
+
 }
