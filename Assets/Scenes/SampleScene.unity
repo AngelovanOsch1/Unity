@@ -325,8 +325,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 866236587}
   - {fileID: 1864562752}
+  - {fileID: 889324542}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -334,7 +334,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &866236583
+--- !u!1 &889324541
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,10 +342,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 866236587}
-  - component: {fileID: 866236586}
-  - component: {fileID: 866236585}
-  - component: {fileID: 866236588}
+  - component: {fileID: 889324542}
+  - component: {fileID: 889324544}
+  - component: {fileID: 889324543}
+  - component: {fileID: 889324545}
   m_Layer: 5
   m_Name: LivesText
   m_TagString: Untagged
@@ -353,13 +353,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &866236585
+--- !u!224 &889324542
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889324541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 538758785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -464.17004, y: -208.9}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &889324543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866236583}
+  m_GameObject: {fileID: 889324541}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -386,48 +405,29 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lives: 3'
---- !u!222 &866236586
+  m_Text: New Text
+--- !u!222 &889324544
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866236583}
+  m_GameObject: {fileID: 889324541}
   m_CullTransparentMesh: 1
---- !u!224 &866236587
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866236583}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 538758785}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -499.9, y: -215.6}
-  m_SizeDelta: {x: 88.531, y: 16.5996}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &866236588
+--- !u!114 &889324545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866236583}
+  m_GameObject: {fileID: 889324541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ade57fa91d0bf984ca3746a985039b43, type: 3}
+  m_Script: {fileID: 11500000, guid: 72ce626201d0a034296bd1939cf58f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timerScript: {fileID: 1864562753}
-  livesText: {fileID: 866236585}
+  livesText: {fileID: 889324543}
   lives: 3
 --- !u!1 &1190262696
 GameObject:
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeValue: 240
   timerText: {fileID: 1864562754}
-  lives: {fileID: 866236588}
+  lives: {fileID: 889324545}
   playerController: {fileID: 1190262702}
 --- !u!114 &1864562754
 MonoBehaviour:
