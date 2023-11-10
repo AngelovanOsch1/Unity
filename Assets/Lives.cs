@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Lives : MonoBehaviour
 {
-    public Timer timerScript; // Reference to your Timer script
+    public Timer timerScript; // Reference to Timer script
     public Text livesText;
     public int lives = 3;
 
